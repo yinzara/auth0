@@ -400,7 +400,7 @@ type ConnectionOptionsOTP struct {
 
 type ConnectionOptionsSMS struct {
 	Name     *string `json:"name,omitempty"`
-	From     *string `json:"from,omitempty"`
+	From     *string `json:"from"` // cannot omitempty or unable to use messaging_service_sid (as it requires "from": null)
 	Syntax   *string `json:"syntax,omitempty"`
 	Template *string `json:"template,omitempty"`
 
